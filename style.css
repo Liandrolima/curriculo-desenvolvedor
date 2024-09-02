@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+body {
+    background-color: lightsalmon;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt; 
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.item, .itemb {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap; 
+    width: 50%;
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 20px;       
+    text-align: left;   
+    box-sizing: border-box;
+}
+
+.itemb {
+    background-color: wheat;
+    color: black;
+}
+
+.item > h1, .itemb > h1 {
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.item > h2 {
+    color: green;
+}
+
+h4, p {
+    margin: 5px 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.contact-info > p {
+    margin-top: 10px;
+}
+
+div > img {
+    align-self: center;
+    height: 170px; 
+    border-radius: 100px;
+    border: 2px solid green;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1); 
+    border-color: #555;
+}
+
+.itemb > hr {
+    border: 2px solid #000;  
+    background-color: transparent; 
+    margin: 0px 0 20px 0;  
+}
+
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+    }
+
+    .container {
+        background-color: white;
+        border: none;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .item, .itemb {
+        background-color: white;
+        color: black;
+        border: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px; 
+        box-sizing: border-box;
+        page-break-inside: avoid;
+    }
+
+    
+
+    h1, h2, h3, h4 {
+        margin: 5px 0; 
+        color: black;
+    }
+
+    .itemb > hr {
+        border: 1px solid black;
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 10pt; 
+        line-height: 1.2; 
+    }
+
+    
+    .container, .item, .itemb {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
